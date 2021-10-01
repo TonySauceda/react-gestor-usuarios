@@ -16,25 +16,27 @@ function App() {
 	}
 
 	return (
-		<Container>
-			<Card>
-				<div style={{ padding: 20 }}>
-					<form onSubmit={submit}>
-						<Input label="Nombre: " name="name" value={form.name} onChange={handleChange} />
-						<Input label="Apellido: " name="lastname" value={form.lastname} onChange={handleChange} />
-						<Input label="Correo: " name="email" value={form.email} onChange={handleChange} />
-						<Button>Enviar</Button>
-					</form>
-				</div>
-			</Card>
-			<Card>
-				<ul>
-					{users.map((u) => (
-						<li key={u.email}>{`${u.name} ${u.lastname} ${u.email}`}</li>
-					))}
-				</ul>
-			</Card>
-		</Container>
+		<div style={{ marginTop: '15%' }}>
+			<Container>
+				<Card>
+					<div style={{ padding: 20 }}>
+						<form onSubmit={submit}>
+							<Input label="Nombre: " name="name" value={form.name} onChange={handleChange} />
+							<Input label="Apellido: " name="lastname" value={form.lastname} onChange={handleChange} />
+							<Input label="Correo: " name="email" value={form.email} onChange={handleChange} />
+							<Button>Enviar</Button>
+						</form>
+					</div>
+				</Card>
+				<Card>
+					<ul>
+						{users.map((u) => (
+							<li key={u.email}>{`${u.name} ${u.lastname} ${u.email}`}</li>
+						))}
+					</ul>
+				</Card>
+			</Container>
+		</div>
 	)
 }
 
